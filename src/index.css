@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 추가 스타일 */
+.prose {
+  max-width: 100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* 마크다운 스타일링 */
+.markdown-content {
+    /* 기본 스타일 */
+    @apply text-gray-800 leading-relaxed;
+    
+    /* 제목 스타일 */
+    h1 { @apply text-4xl font-bold mb-6; }
+    h2 { @apply text-3xl font-bold mb-4 mt-8; }
+    h3 { @apply text-2xl font-semibold mb-3 mt-6; }
+    
+    /* 링크 스타일 */
+    a { 
+        @apply text-blue-600 hover:text-blue-800 underline;
+    }
+    
+    /* 리스트 스타일 */
+    ul, ol {
+        @apply list-disc pl-8;
+    }
+}
