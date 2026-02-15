@@ -19,10 +19,34 @@ const projects = [
     },
     {
         title: '티켓 매니저',
-        description: '인터파크 티켓 매니저 데스크탑 앱',
+        description: '인터파크 티켓 매니저 브라우저 확장프로그램',
         tech: ['JavaScript', 'Chrome Extension', 'REST API', 'HTML/CSS'],
         thumbnail: `${process.env.PUBLIC_URL}/images/project3.jpg`,
         file: `${process.env.PUBLIC_URL}/projects/project3.md`
+    },
+    {
+        title: '로또 번호 생성기',
+        description: 'React 기반 로또 번호 생성 및 관리 웹앱',
+        tech: ['React', 'JavaScript', 'HTML/CSS', 'Vercel'],
+        thumbnail: `${process.env.PUBLIC_URL}/images/project4.jpg`,
+        file: `${process.env.PUBLIC_URL}/projects/project4.md`,
+        link: 'https://lotto-omega-lyart.vercel.app/'
+    }
+    ,
+    {
+        title: '티켓 플랫폼 데이터 분석 대시보드',
+        description: '플랫폼 API 크롤링을 통한 판매 현황\nBI 대시보드',
+        tech: ['Node.js', 'Express', 'Python','Flask', 'DB', 'Chart.js'],
+        thumbnail: `${process.env.PUBLIC_URL}/images/project5.jpg`,
+        file: `${process.env.PUBLIC_URL}/projects/project5.md`
+    },
+    {
+        title: 'CatchDrawing',
+        description: '실시간 협업 화이트보드\n모니터링 대시보드',
+        tech: ['Spring Boot', 'WebSocket', 'STOMP', 'Chart.js', 'Docker'],
+        thumbnail: `${process.env.PUBLIC_URL}/images/project6.jpg`,
+        file: `${process.env.PUBLIC_URL}/projects/project6.md`,
+        link: 'https://catchdrawing-production.up.railway.app/'
     }
 ];
 
@@ -52,16 +76,16 @@ function Projects() {
                             whileHover={{ y: -10 }}
                             onClick={() => setSelectedProject(project)}
                         >
-                            <div className="h-48 bg-gray-200 relative overflow-hidden">
+                            <div className="h-52 bg-gray-100 relative overflow-hidden flex items-center justify-center">
                                 <img 
                                     src={project.thumbnail} 
                                     alt={project.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-2xl font-bold mb-2 text-gray-800">{project.title}</h3>
-                                <p className="text-gray-600 mb-4">{project.description}</p>
+                                <h3 className="text-lg font-bold mb-2 text-gray-800 leading-snug whitespace-pre-line">{project.title}</h3>
+                                <p className="text-gray-600 mb-4 whitespace-pre-line">{project.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tech.map((tech, i) => (
                                         <span 

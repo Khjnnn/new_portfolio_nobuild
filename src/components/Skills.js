@@ -8,7 +8,7 @@ const Skills = () => {
     const skills = [
         {
             category: 'Backend Development',
-            // description: '안정적이고 확장 가능한 서버 시스템을 구축합니다.',
+            description: '안정적이고 확장 가능한 서버 시스템을 구축합니다.',
             items: [
                 { name: 'Java', icon: <FaJava className="text-[#007396]" /> },
                 { name: 'Spring', icon: <SiSpring className="text-[#6DB33F]" /> },
@@ -18,7 +18,7 @@ const Skills = () => {
         },
         {
             category: 'Frontend Development',
-            // description: '모던 웹 개발을 위한 다양한 프론트엔드 기술을 활용합니다.',
+            description: '모던 웹 개발을 위한 다양한 프론트엔드 기술을 활용합니다.',
             items: [
                 { name: 'JavaScript', icon: <SiJavascript className="text-[#F7DF1E]" /> },
                 { name: 'React', icon: <FaReact className="text-[#61DAFB]" /> },
@@ -30,7 +30,7 @@ const Skills = () => {
         },
         {
             category: 'Database',
-            // description: '다양한 데이터베이스 시스템을 활용한 데이터 관리.',
+            description: '다양한 데이터베이스 시스템을 활용한 데이터 관리.',
             items: [
                 { name: 'Oracle', icon: <SiOracle className="text-[#F80000]" /> },
                 { name: 'MS SQL', icon: <SiMicrosoftsqlserver className="text-[#CC2927]" /> },
@@ -41,7 +41,7 @@ const Skills = () => {
         },
         {
             category: 'DevOps & Infrastructure',
-            // description: '효율적인 개발 환경과 인프라를 구축하고 운영합니다.',
+            description: '효율적인 개발 환경과 인프라를 구축하고 운영합니다.',
             items: [
                 { name: 'Git', icon: <FaGitAlt className="text-[#F05032]" /> },
                 { name: 'AWS', icon: <FaAws className="text-[#232F3E]" /> },
@@ -88,6 +88,7 @@ const Skills = () => {
                             <h3 className="text-2xl font-bold mb-4 text-gray-800">
                                 {skill.category}
                             </h3>
+                            <p className="text-gray-600 mb-6">{skill.description}</p>
                             <div className="flex flex-wrap gap-6">
                                 {skill.items.map((item, i) => (
                                     <motion.div 
