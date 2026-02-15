@@ -36,7 +36,7 @@ const projects = [
     {
         title: '티켓 플랫폼 데이터 분석 대시보드',
         description: '플랫폼 API 크롤링을 통한 판매 현황\nBI 대시보드',
-        tech: ['Node.js', 'Express', 'Python','Flask', 'DB', 'Chart.js'],
+        tech: ['Node.js', 'Express', 'Python','Flask', 'Supabase', 'PostgreSQL','Chart.js'],
         thumbnail: `${process.env.PUBLIC_URL}/images/project5.jpg`,
         file: `${process.env.PUBLIC_URL}/projects/project5.md`
     },
