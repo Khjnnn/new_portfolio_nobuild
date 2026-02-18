@@ -2,6 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Experience = () => {
+    const careerStart = new Date(2020, 6);
+    const now = new Date();
+    const totalMonths = (now.getFullYear() - careerStart.getFullYear()) * 12 + (now.getMonth() - careerStart.getMonth());
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    const careerDuration = months > 0 ? `${years}년 ${months}개월` : `${years}년`;
+
     const experiences = [
         {
             company: "더존비즈온",
@@ -16,7 +23,8 @@ const Experience = () => {
                         "Spring 및 MSA 기반 ERP 구축 개발",
                         "RESTful API 설계 및 구현",
                         "회계, 인사, SCM 등 모듈 개발",
-                        "타 그룹웨어 연동 및 전자결재 연동 개발"
+                        "타 그룹웨어 연동 및 전자결재 및 SSO 연동 개발",
+                        "외부개발자 대상 FoEX 개발 가이드 및 표준 교육"
                     ],
                     skills: ["Spring", "Spring Boot", "JavaScript", "Oracle", "Jenkins", "Gitlab", "Redis", "Jeus", "Nginx", "MyBatis"]
                 }
@@ -29,12 +37,12 @@ const Experience = () => {
             description: "물류 시스템 SI 프로젝트",
             projects: [
                 {
-                    name: "통합 물류 통합 관리 시스템 고도화",
+                    name: "통합 물류 통합 관리 시스템 구축 및 고도화 (서린상사)",
                     period: "2021.05 - 2022.02",
                     details: [
                         "Spring Framework 기반 물류 시스템 개발",
                         "입고/출고/재고 관리 시스템 구축",
-                        "WMS, OMS 개발",
+                        "WMS, OMS 모듈 개발",
                         "관세청 유니패스 인터페이스 연동 개발"
                     ],
                     skills: ["Spring", "Java", "Nexacro17" ,"MS SQL", "Git", "Jenkins"]
@@ -74,6 +82,15 @@ const Experience = () => {
                 >
                     ERP 및 물류 시스템 개발 경험을 바탕으로 안정적이고 효율적인 서비스를 제공하겠습니다.
                 </motion.p>
+                <motion.div
+                    className="flex items-center gap-4 mb-10"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <p className="text-lg text-gray-500 whitespace-nowrap pl-4 pr-8">총 경력 : <span className="text-gray-700">{careerDuration}</span></p>
+                </motion.div>
                 <div className="space-y-12">
                     {experiences.map((exp, index) => (
                         <motion.div
